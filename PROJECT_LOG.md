@@ -110,3 +110,26 @@ outputs/qc/rest_bold_qc.csv
 
 - Confirm the experimental meaning of `ses-01` and `ses-02`.
 - Test single-subject ROI time-series extraction.
+
+### DataLad Content Retrieval Test
+
+Downloaded one complete resting-state analysis unit using DataLad:
+
+- Subject: sub-PC001
+- Session: ses-01
+- Task: rest
+- Run: run-1
+
+Downloaded files:
+
+- MNI-space preprocessed BOLD
+- confounds timeseries TSV
+- MNI-space brain mask
+
+After rebuilding the file index:
+
+```text
+BOLD exists: 1 / 127
+Confounds exists: 2 / 127
+Masks exists: 1 / 127
+Ready for analysis: 1 / 127
