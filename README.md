@@ -45,7 +45,7 @@ The full dataset (~233 GB) is **not included in this repository**.
 
 # Analysis Pipeline
 
-![analysis pipeline](figures/analysispipeline.png)
+![analysis pipeline](figure/analysispipeline.png)
 
 
 The analysis pipeline consists of the following steps:
