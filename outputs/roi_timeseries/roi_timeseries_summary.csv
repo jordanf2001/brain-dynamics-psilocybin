@@ -1,0 +1,2 @@
+subject,session,task,run,n_timepoints,n_rois,atlas_path,timeseries_path,timeseries_z_path,labels_path
+sub-PC001,ses-01,task-rest,run-1,504,67,outputs/roi_timeseries/sub-PC001_ses-01_task-rest_run-1_grid_atlas.nii.gz,outputs/roi_timeseries/sub-PC001_ses-01_task-rest_run-1_roi_timeseries.csv,outputs/roi_timeseries/sub-PC001_ses-01_task-rest_run-1_roi_timeseries_z.csv,outputs/roi_timeseries/sub-PC001_ses-01_task-rest_run-1_roi_labels.csv

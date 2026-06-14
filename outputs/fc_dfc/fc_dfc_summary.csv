@@ -1,0 +1,2 @@
+subject,session,task,run,n_timepoints,n_rois,window_size,step_size,n_windows,static_fc_path,static_fc_z_path,window_summary_path,edge_dfc_summary_path,mean_edge_variability,max_edge_variability
+sub-PC001,ses-01,task-rest,run-1,504,67,60,10,45,outputs/fc_dfc/sub-PC001_ses-01_task-rest_run-1_static_fc.csv,outputs/fc_dfc/sub-PC001_ses-01_task-rest_run-1_static_fc_fisher_z.csv,outputs/fc_dfc/sub-PC001_ses-01_task-rest_run-1_window_summary.csv,outputs/fc_dfc/sub-PC001_ses-01_task-rest_run-1_edge_dfc_summary.csv,0.3606209564757253,0.6527249362741745
