@@ -45,6 +45,9 @@ The full dataset (~233 GB) is **not included in this repository**.
 
 # Analysis Pipeline
 
+![analysis pipeline](figures/analysispipeline.png)
+
+
 The analysis pipeline consists of the following steps:
 
 1. Dataset inspection and BIDS structure verification  
