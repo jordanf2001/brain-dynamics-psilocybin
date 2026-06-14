@@ -7,6 +7,7 @@ import pandas as pd
 def parse_bids_entities(path):
     """
     Parse basic BIDS-like entities from a file path.
+
     Expected examples:
     sub-PC211_ses-02_task-rest_run-1_space-MNI152NLin2009cAsym_desc-preproc_bold.nii.gz
     sub-PC211_ses-02_task-rest_run-1_desc-confounds_timeseries.tsv
@@ -47,6 +48,20 @@ def make_key(entities):
         entities["task"],
         entities["run"],
     )
+
+
+def safe_relative_path(path, root):
+    """
+    Return a path relative to root if possible.
+    If path is None, return an empty string.
+    """
+    if path is None:
+        return ""
+
+    try:
+        return str(path.relative_to(root))
+    except ValueError:
+        return str(path)
 
 
 def main():
@@ -110,18 +125,34 @@ def main():
         confound_path = confound_map.get(key)
         mask_path = mask_map.get(key)
 
+        bold_exists = bold_path.exists()
+        confounds_exists = confound_path.exists() if confound_path else False
+        mask_exists = mask_path.exists() if mask_path else False
+
+        ready_for_analysis = bool(
+            bold_exists
+            and confounds_exists
+            and mask_exists
+        )
+
         row = {
             "subject": entities["subject"],
             "session": entities["session"],
             "task": entities["task"],
             "run": entities["run"],
+
             "bold_mni_path": str(bold_path),
             "confounds_path": str(confound_path) if confound_path else "",
             "brain_mask_path": str(mask_path) if mask_path else "",
-            "bold_exists": bold_path.exists(),
-            "confounds_exists": confound_path.exists() if confound_path else False,
-            "mask_exists": mask_path.exists() if mask_path else False,
-            "ready_for_analysis": bool(confound_path and mask_path),
+
+            "bold_mni_relpath": safe_relative_path(bold_path, data_dir),
+            "confounds_relpath": safe_relative_path(confound_path, data_dir),
+            "brain_mask_relpath": safe_relative_path(mask_path, data_dir),
+
+            "bold_exists": bold_exists,
+            "confounds_exists": confounds_exists,
+            "mask_exists": mask_exists,
+            "ready_for_analysis": ready_for_analysis,
         }
 
         rows.append(row)
@@ -135,14 +166,25 @@ def main():
     print("=" * 70)
     print("Resting-state file index generated")
     print("=" * 70)
+    print(f"Dataset directory: {data_dir}")
+    print(f"fMRIPrep directory: {fmriprep_dir}")
     print(f"Output: {output_path}")
     print(f"Rows: {len(df)}")
+
     print()
     print("Ready for analysis:")
     print(df["ready_for_analysis"].value_counts(dropna=False))
+
     print()
     print("Session counts:")
     print(df["session"].value_counts(dropna=False).sort_index())
+
+    print()
+    print("File existence summary:")
+    print(f"BOLD exists:      {df['bold_exists'].sum()} / {len(df)}")
+    print(f"Confounds exists: {df['confounds_exists'].sum()} / {len(df)}")
+    print(f"Masks exists:     {df['mask_exists'].sum()} / {len(df)}")
+
     print()
     print("First 10 rows:")
     print(df.head(10).to_string(index=False))
