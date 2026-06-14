@@ -75,12 +75,15 @@ The project has completed the initial dataset inspection and file-index generati
 Current status:
 
 ```text
-Dataset inspection: completed
+Dataset structure inspection: completed
 File index generation: completed
-Image-level QC: not yet completed
-ROI time-series extraction: not yet completed
-Static FC: not yet completed
-Dynamic FC: not yet completed
+DataLad content retrieval test: completed
+Single-run local readiness: completed
+Image-level QC: next step
+ROI time-series extraction: not yet started
+Static FC: not yet started
+Dynamic FC: not yet started
+
 ```
 
 The dataset appears feasible for downstream ROI-based FC/dFC analyses, but image-level quality control is still required before formal analysis.
