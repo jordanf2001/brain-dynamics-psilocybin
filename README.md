@@ -1,6 +1,7 @@
 # Dynamic Functional Connectivity in Psychedelic-Induced Altered States of Consciousness
 
 Author: Yu-kan Fan (范育康） 
+
 Institution: National Taiwan University
 
 This repository develops a reproducible workflow for inspecting and analyzing resting-state fMRI data from the PsiConnect dataset. The project focuses on how psychedelic-associated altered states of consciousness may influence the temporal organization of large-scale brain networks.
