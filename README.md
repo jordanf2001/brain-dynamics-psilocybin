@@ -125,7 +125,7 @@ sub-PC001 / ses-01 / task-rest / run-1
 
 These results are intended as **workflow-validation outputs**, not as evidence for psychedelic-related effects or group-level findings.
 
-### Pilot Outputs
+### Pilot output summary
 
 | Output | Result |
 |---|---:|
@@ -137,145 +137,101 @@ These results are intended as **workflow-validation outputs**, not as evidence f
 
 ### ROI Time-Series Extraction
 
-The pilot run produced a 504 × 67 ROI time-series matrix using a preliminary grid-based atlas. ROI signals were z-scored for visualization.
-
 ![ROI time-series heatmap](figures/pilot_roi_timeseries_heatmap.png)
 
-**Figure:** **Figure:** ROI time-series heatmaps from the pilot run. The upper panel shows raw ROI signals, and the lower panel shows z-scored ROI signals. Rows correspond to ROIs and columns correspond to time points.
-
-This heatmap verifies that ROI time-series extraction produced a usable matrix for downstream FC/dFC analysis.
+**Figure:** ROI time-series heatmaps from the pilot run. The upper panel shows raw ROI signals, and the lower panel shows z-scored ROI signals. Rows correspond to ROIs and columns correspond to time points.
 
 ### Static Functional Connectivity
-
-Pairwise Pearson correlations were computed across the full resting-state run, producing a 67 × 67 static FC matrix.
 
 ![Static FC matrix](figures/pilot_static_fc_fisher_z_matrix.png)
 
 **Figure:** Static FC matrices from the pilot run. The left panel shows raw Pearson correlation values, and the right panel shows Fisher z-transformed FC values. The diagonal is masked for visualization.
 
-This output serves as a static reference before dynamic FC estimation.
-Fisher z-transformed FC matrices are also generated for downstream statistical analysis.
-
 ### Static FC Descriptive Checks
 
 ![Static FC descriptive checks](figures/pilot_static_fc_descriptive_checks.png)
 
-These plots were used as sanity checks to inspect the distribution of static FC values and ROI-level mean connectivity. They are not interpreted as ROI-level neurobiological findings.
+**Figure:** Static FC sanity checks, including the distribution of pairwise FC values and mean connectivity strength by ROI. These plots are not interpreted as ROI-level neurobiological findings.
 
-## Dynamic Functional Connectivity
+### Dynamic Functional Connectivity
 
 Dynamic FC was estimated using a sliding-window approach. The pilot run was divided into 45 overlapping windows. For each window, a Fisher z-transformed FC matrix was computed.
-The dFC outputs include:
-
-1. **Window-level mean FC trajectory**: average FC across ROI pairs within each window.
-2. **Edge-wise dFC variability**: standard deviation of each ROI-to-ROI connection across windows.
-3. **Window-to-window FC similarity**: similarity between whole-matrix FC patterns across windows.
-
-### Dynamic FC 1: Window-Level Summary
-
-Using a sliding-window approach, the pilot run was divided into 45 overlapping windows. For each window, a Fisher z-transformed FC matrix was computed.
 
 ![dFC mean connectivity trajectory](figures/pilot_dfc_mean_connectivity_trajectory.png)
 
 **Figure:** Mean Fisher z-transformed FC across sliding windows. The shaded region indicates ±1 SD across edges within each window.
 
-### Dynamic FC 2: Edge-Level Variability
-
-Edge-wise dFC variability was computed as the standard deviation of each ROI-to-ROI connection across the 45 sliding windows.
-
 ![dFC variability matrix](figures/pilot_dfc_variability_matrix.png)
 
 **Figure:** Edge-wise dFC variability matrix. Brighter values indicate ROI-to-ROI connections with greater temporal fluctuation across windows.
-
-### Dynamic FC 3: Pattern-Level Similarity
-
-For each sliding window, the upper triangle of the FC matrix was vectorized into an edge vector. Window-to-window similarity was computed as the correlation between these edge vectors.
 
 ![Window-to-window FC similarity](figures/pilot_window_to_window_fc_similarity.png)
 
 **Figure:** Window-to-window FC pattern similarity matrix. Higher values indicate more similar whole-matrix FC configurations between windows.
 
-
-
 ### Interpretation
 
-These interim results show that the workflow can generate ROI time series, static FC, and sliding-window dFC outputs from fMRIPrep derivatives. At this stage, the results validate the computational workflow only. They do not support claims about psychedelic-related effects, session differences, or group-level mechanisms.
+These interim results show that the workflow can generate ROI time series, static FC, and sliding-window dFC outputs from fMRIPrep derivatives. At this stage, the outputs validate the computational workflow only. They do not support claims about psychedelic-related effects, session differences, or group-level neural mechanisms.
 
+## Usage
 
----
-
-# Usage
-
-## 1. Check dataset availability
-
-Run the dataset inspection script:
+### 1. Check dataset availability
 
 ```bash
-python src/check_dataset.py --data-dir /Users/macbookair/ds006110
+python src/check_dataset.py --data-dir /path/to/ds006110
 ```
 
-This script checks the availability of resting-state fMRIPrep outputs, including:
-
-- MNI-space preprocessed BOLD files
-- Confounds TSV files
-- MNI-space brain masks
-- Session-level coverage
-
-## 2. Build resting-state file index
-
-Run the file-index generation script:
+### 2. Build resting-state file index
 
 ```bash
-python src/build_file_index.py --data-dir /Users/macbookair/ds006110
+python src/build_file_index.py --data-dir /path/to/ds006110
 ```
 
-This script generates:
+This generates:
 
 ```text
 outputs/file_index/rest_file_index.csv
 ```
 
-The file index includes:
+## Reproducing Pilot Figures
 
-- subject
-- session
-- task
-- run
-- MNI-space BOLD path
-- confounds path
-- brain mask path
-- relative paths
-- file existence indicators
-- readiness for analysis
+The pilot figures were generated using:
 
----
+```text
+notebooks/pilot_figure_generation.ipynb
+```
 
-# Current Limitations
+When running the notebook in Google Colab, upload the following derived pilot outputs when prompted:
 
-- The exact experimental meaning of `ses-01` and `ses-02` still needs to be confirmed from the dataset documentation or associated publication.
-- The current repository has completed dataset inspection and file indexing, but ROI time-series extraction has not yet been implemented.
+1. `sub-PC001_ses-01_task-rest_run-1_roi_timeseries_z.csv`
+2. `sub-PC001_ses-01_task-rest_run-1_static_fc.csv`
+3. `sub-PC001_ses-01_task-rest_run-1_static_fc_fisher_z.csv`
+4. `fc_dfc.zip`
+
+The `fc_dfc.zip` file should contain 45 Fisher z-transformed sliding-window FC matrices matching:
+
+```text
+sub-PC001_ses-01_task-rest_run-1_window-*_fc_fisher_z.csv
+```
+
+## Current Limitations
+
+- One pilot run has been processed so far.
+- The current atlas is a preliminary grid-based atlas.
 - Motion and nuisance control are not finalized.
-- Static FC and sliding-window dFC analyses are planned but not yet completed.
-- Large neuroimaging files are not stored in this GitHub repository.
-- Further quality control is required to verify BOLD readability, image dimensions, timepoints, TR, confounds alignment, and motion quality.
+- No group-level inference has been performed.
+- The exact experimental meaning of `ses-01` and `ses-02` still needs to be confirmed from dataset documentation or associated publications.
+- Reproducibility here refers to computational reproducibility only, not external replication.
 
----
+## Next Steps
 
-# Next Steps
+- Scale the workflow to all 127 matched resting-state runs.
+- Replace the preliminary grid atlas with a standard atlas such as Schaefer 100/200.
+- Strengthen motion and nuisance regression.
+- Link imaging runs with session-level or condition-level metadata.
+- Compare FC/dFC features across sessions or conditions after metadata linkage.
 
-The immediate next steps are:
-
-1. Build a BOLD metadata quality-control table.
-2. Verify BOLD image readability and metadata.
-3. Check whether BOLD timepoints match confounds rows.
-4. Confirm the experimental meaning of `ses-01` and `ses-02`.
-5. Test ROI time-series extraction for a single subject/session.
-6. Compute a single-subject static FC matrix.
-7. Implement a simple sliding-window dFC demonstration.
-
----
-
-# License
+## License
 
 This repository is released under the MIT License.
 
