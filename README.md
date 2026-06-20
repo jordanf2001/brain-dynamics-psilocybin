@@ -162,7 +162,7 @@ A machine-readable summary of the pilot run is available at `outputs/pilot_summa
 
 <div align="center">
   <p><b>Static FC Matrix</b></p>
-  <img src="figures/pilot_static_fc_fisher_z_matrix.png" alt="Static FC matrix" width="50%">
+  <img src="figures/pilot_static_fc_fisher_z_matrix.png" alt="Static FC matrix" width="70%">
 </div>
 
 **Figure:** Static FC matrices from the pilot run. The left panel shows raw Pearson correlation values, and the right panel shows Fisher z-transformed FC values. The diagonal is masked for visualization.
