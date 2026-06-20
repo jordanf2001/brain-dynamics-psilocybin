@@ -102,7 +102,11 @@ This file index contains subject/session-level paths for BOLD images, confounds 
 
 # Analysis Pipeline
 
-![analysis pipeline](analysispipeline.png)
+<div align="center">
+  <img src="analysispipeline.png" alt="analysis pipeline" width="20%">
+</div>
+
+---
 
 The planned analysis pipeline consists of the following steps:
 
