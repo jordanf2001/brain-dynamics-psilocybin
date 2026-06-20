@@ -1,24 +1,26 @@
-# Dynamic Functional Connectivity in Psychedelic-Induced Altered States of Consciousness
+# Computationally Reproducible FC/dFC Workflow for Psychedelic Resting-State fMRI
+(original: Dynamic Functional Connectivity in Psychedelic-Induced Altered States of Consciousness)
+
 
 Author: Yu-kan Fan (范育康） 
 
 Institution: National Taiwan University
 
-This repository develops a reproducible workflow for inspecting and analyzing resting-state fMRI data from the PsiConnect dataset. The project focuses on how psychedelic-associated altered states of consciousness may influence the temporal organization of large-scale brain networks.
+This repository develops a computationally reproducible workflow for static functional connectivity (FC) and dynamic functional connectivity (dFC) analysis of resting-state fMRI data from the PsiConnect dataset. At the current stage, the project focuses on workflow construction and pilot-run validation, not group-level inference about psychedelic-related effects.
 
 The main goal is to compare **static functional connectivity (FC)** and **dynamic functional connectivity (dFC)** to determine whether dynamic connectivity measures provide additional information beyond traditional static connectivity analyses.
 
-This repository is part of a course project focused on **open neuroscience workflows**, including dataset inspection, reproducible pipelines, and open-source neuroimaging analysis.
+## scope
+The current repository does not yet establish external replication, generalizability to other datasets, or group-level psychedelic-related effects.
 
 ---
 
-# Research Questions
+## Research Questions
 
-This project focuses on three main questions:
-
-- How do psilocybin-associated altered states of consciousness alter resting-state brain connectivity?
-- Do brain networks exhibit different **temporal dynamics** across experimental sessions?
-- Does **dynamic functional connectivity (dFC)** provide complementary information beyond static FC?
+Current workflow-focused questions:
+- Can we build a documented and computationally reproducible FC/dFC workflow for the PsiConnect fMRIPrep derivatives?
+- Can the workflow generate ROI time series, static FC matrices, and sliding-window dFC summaries from one pilot run?
+- After scaling up, can FC/dFC features be compared across sessions or psychedelic-related conditions?
 
 ---
 
@@ -32,13 +34,7 @@ Source: https://openneuro.org/datasets/ds006110
 
 Key features of the dataset include:
 
-- Approximately 65 participants
-- Two sessions
-- Psilocybin-related experimental design
-- Multimodal recordings, including MRI and EEG
-- Tasks including resting-state, meditation, music listening, and movie watching
-
-This project focuses on **resting-state fMRI data** to analyze intrinsic brain network dynamics.
+This project focuses only on the resting-state fMRI derivatives from the PsiConnect dataset.
 
 The full dataset is **not included in this repository** because neuroimaging files are large. Users should access the original dataset through OpenNeuro and DataLad.
 
@@ -60,7 +56,13 @@ This confirms that the dataset can support resting-state functional connectivity
 
 # Current Project Status
 
-The current version of this repository has completed the initial dataset inspection and file-index generation stages.
+Completed so far:
+
+- Inspected fMRIPrep derivatives and generated a resting-state file index.
+- Matched resting-state BOLD images, confounds files, and brain masks across runs.
+- Verified 127 runs with matched BOLD/confounds/mask files.
+- Processed one full pilot run.
+- Generated pilot ROI time series, static FC, and sliding-window dFC outputs.
 
 Confirmed resting-state fMRIPrep derivatives:
 
