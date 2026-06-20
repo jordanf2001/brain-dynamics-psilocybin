@@ -135,6 +135,53 @@ altered-states-dfc/
 ```
 
 ---
+## Interim Pilot Results
+
+To show what the workflow yields, I applied the current pipeline to one pilot resting-state run:
+
+```text
+sub-PC001 / ses-01 / task-rest / run-1
+```
+
+These results are intended as **workflow-validation outputs**, not as evidence for psychedelic-related effects or group-level findings.
+
+### Pilot Outputs
+
+| Output | Result |
+|---|---:|
+| ROI time-series matrix | 504 × 67 |
+| Static FC matrix | 67 × 67 |
+| Sliding-window FC matrices | 45 |
+| Mean edge dFC variability | 0.361 |
+| Max edge dFC variability | 0.653 |
+
+### Example Figures
+
+#### ROI Time Series
+
+![ROI time-series heatmap](figures/pilot_roi_timeseries_heatmap.png)
+
+#### Static FC Matrix
+
+![Static FC matrix](figures/pilot_static_fc_matrix.png)
+
+#### Static FC Descriptive Checks
+
+![Static FC descriptive checks](figures/pilot_static_fc_descriptive_checks.png)
+
+These plots were used as sanity checks to confirm that the static FC output had a reasonable structure.
+
+#### Dynamic FC Summaries
+
+![Dynamic FC summaries](figures/pilot_dynamic_fc_summary.png)
+
+The dynamic FC workflow generated window-level, edge-level, and pattern-level summaries from 45 sliding-window FC matrices.
+
+### Interpretation
+
+The pilot run confirms that the workflow can generate ROI time series, static FC, and sliding-window dFC outputs from the fMRIPrep derivatives. These outputs are descriptive and are used to validate the pipeline before scaling to the full dataset.
+
+---
 
 # Usage
 
