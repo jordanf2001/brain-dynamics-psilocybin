@@ -181,7 +181,7 @@ Fisher z-transformed FC matrices are also generated for downstream statistical a
 
 These plots were used as sanity checks to inspect the distribution of static FC values and ROI-level mean connectivity. They are not interpreted as ROI-level neurobiological findings.
 
-### Dynamic FC: Window-Level Summary
+### Dynamic FC 1: Window-Level Summary
 
 Using a sliding-window approach, the pilot run was divided into 45 overlapping windows. For each window, a Fisher z-transformed FC matrix was computed.
 
@@ -189,6 +189,21 @@ Using a sliding-window approach, the pilot run was divided into 45 overlapping w
 
 **Figure:** Mean Fisher z-transformed FC across sliding windows. The shaded region indicates ±1 SD across edges within each window.
 
+### Dynamic FC 2: Edge-Level Variability
+
+Edge-wise dFC variability was computed as the standard deviation of each ROI-to-ROI connection across the 45 sliding windows.
+
+![dFC variability matrix](figures/pilot_dfc_variability_matrix.png)
+
+**Figure:** Edge-wise dFC variability matrix. Brighter values indicate ROI-to-ROI connections with greater temporal fluctuation across windows.
+
+### Dynamic FC 3: Pattern-Level Similarity
+
+For each sliding window, the upper triangle of the FC matrix was vectorized into an edge vector. Window-to-window similarity was computed as the correlation between these edge vectors.
+
+![Window-to-window FC similarity](figures/pilot_window_to_window_fc_similarity.png)
+
+**Figure:** Window-to-window FC pattern similarity matrix. Higher values indicate more similar whole-matrix FC configurations between windows.
 
 ### Dynamic Functional Connectivity
 
