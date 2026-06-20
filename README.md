@@ -169,7 +169,10 @@ A machine-readable summary of the pilot run is available at `outputs/pilot_summa
 
 ### Static FC Descriptive Checks
 
-![Static FC descriptive checks](figures/pilot_static_fc_descriptive_checks.png)
+<div align="center">
+  <p><b>Static FC Descriptive Checks</b></p>
+  <img src="figures/pilot_static_fc_descriptive_checks.png" alt="Static FC descriptive checks" width="30%">
+</div>
 
 **Figure:** Static FC sanity checks, including the distribution of pairwise FC values and mean connectivity strength by ROI. These plots are not interpreted as ROI-level neurobiological findings.
 
