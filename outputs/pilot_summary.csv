@@ -1,0 +1,3 @@
+subject,session,task,run,n_timepoints,tr,n_rois,n_windows,window_size_tr,step_size_tr,mean_fd,max_fd,mean_edge_dfc_variability,max_edge_dfc_variability
+sub-PC001,ses-01,rest,run-1,504,0.91,67,45,60,10,0.114,1.851,0.361,0.653
+
