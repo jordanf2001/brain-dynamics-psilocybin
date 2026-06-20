@@ -4,8 +4,6 @@
 
 #### Institution: National Taiwan University
 
-(original topic: Dynamic Functional Connectivity in Psychedelic-Induced Altered States of Consciousness)
-
 ---
 
 This repository develops a computationally reproducible workflow for static functional connectivity (FC) and dynamic functional connectivity (dFC) analysis of resting-state fMRI data from the PsiConnect dataset. At the current stage, the project focuses on workflow construction and pilot-run validation, not group-level inference about psychedelic-related effects.
