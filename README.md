@@ -163,6 +163,7 @@ The pilot run produced a 504 × 67 ROI time-series matrix using a preliminary gr
 
 **Figure:** Z-scored ROI time-series heatmap from the pilot run. Rows correspond to ROIs and columns correspond to time points.
 
+This heatmap verifies that ROI time-series extraction produced a usable matrix for downstream FC/dFC analysis.
 
 #### Static FC Matrix
 
