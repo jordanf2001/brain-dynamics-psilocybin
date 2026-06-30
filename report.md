@@ -39,9 +39,6 @@ The **pipeline** runs from dataset inspection and QC, through ROI extraction, to
 </div>
 
 
-
-**Dataset status:** 127 resting-state runs with matched BOLD / confounds / mask files were verified (ses-01: 65, ses-02: 62). The pipeline feasibility check passed.
-
 ---
 
 ## 3. Pipeline 1 — Validation with a Preliminary Grid Atlas
