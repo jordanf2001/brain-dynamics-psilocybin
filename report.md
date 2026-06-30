@@ -7,16 +7,31 @@
 
 ## 1. Motivation: Consciousness Is Dynamic
 
-Conscious states — whether resting, psychedelic, or sensory-deprived — fluctuate over time.
+### Conscious states fluctuate over time. This is evident across multiple research domains:
 
-Traditional **static functional connectivity (sFC)** averages the entire scan into a single matrix, which erases these temporal dynamics. The figure below shows that brain-wide connectivity patterns are **not constant**: different time windows form distinct similarity blocks.
+- **Resting-state** 
+- **Psychedelic** 
+- **Sensory deprivation** 
+
+Prolonged, task-free scans capture **intrinsic brain dynamics** without external interference.
+
+### The Problem with Static Analysis
+
+Traditional **static functional connectivity (sFC)** averages the entire scan into a single matrix — **erasing temporal dynamics completely**.
+
+The figure below shows the reality: connectivity patterns are **not constant**. Different time windows form distinct similarity blocks.
 
 <div align="center">
   <p><b>Why Dynamics Matter: Window-to-Window FC Similarity</b></p>
-  <img src="sch100_window_to_window_fc_similarity.png" alt="Window-to-window FC similarity" width="48%">
+  <img src="sch100_window_to_window_fc_similarity.png" alt="Window-to-window FC similarity" width="50%">
 </div>
 
-If we only ran static analysis, this temporal structure would be **completely averaged away**. This is the core motivation for building a **dynamic functional connectivity (dFC)** pipeline.
+Static analysis would **average all this away**.
+
+### The Solution
+
+This is the core motivation for building a **dynamic functional connectivity (dFC)** pipeline for **task-free** neuroimaging data.
+
 
 ---
 
