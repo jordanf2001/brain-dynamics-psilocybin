@@ -34,7 +34,7 @@ Current workflow-focused questions:
 
 ---
 
-# Dataset
+## Dataset
 
 The analysis uses an open neuroimaging dataset from **OpenNeuro**.
 
@@ -48,7 +48,7 @@ The full dataset is **not included in this repository** because neuroimaging fil
 
 ---
 
-# Dataset Availability
+## Dataset Availability
 
 Full fMRIPrep derivatives were verified in the local DataLad file tree. The dataset includes resting-state preprocessed BOLD images and corresponding confound regressors, including MNI152NLin2009cAsym-space outputs:
 
@@ -62,7 +62,7 @@ This confirms that the dataset can support resting-state functional connectivity
 
 ---
 
-# Current Project Status
+## Current Project Status
 
 Completed so far:
 
@@ -106,7 +106,7 @@ This file index contains subject/session-level paths for BOLD images, confounds 
 
 ---
 
-# Analysis Pipeline
+## Analysis Pipeline
 
 <div align="center">
   <img src="analysispipeline.png" alt="analysis pipeline" width="30%">
