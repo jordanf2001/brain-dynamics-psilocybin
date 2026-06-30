@@ -60,8 +60,11 @@ sub-PC001 / ses-01 / task-rest / run-1
 | Mean edge dFC variability | 0.361 |
 
 <div align="center">
-  <p><b>Grid Atlas — Static FC Matrix</b></p>
-  <img src="figures/pilot_grid67_static_fc_matrix.png" alt="Grid static FC" width="62%">
+  <p><b>Example result: Grid Atlas — Static FC & dFC Variability Matrix</b></p>
+   <img src="figures/pilot_static_fc_fisher_z_matrix.png" alt="Static FC matrix" width="70%">
+   <img src="figures/pilot_dfc_variability_matrix.png" alt="dFC variability matrix" width="50%">
+   <p><b>(see README.md)</b></p>
+
 </div>
 
 **Result:** The pipeline successfully produced ROI time series, static FC, and 45 dynamic FC windows. The code works.
