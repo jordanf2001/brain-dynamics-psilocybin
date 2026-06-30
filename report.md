@@ -93,7 +93,7 @@ sub-PC001 / ses-01 / task-rest / run-1
 
 ## 4. Upgrade: Pipeline 2 with "Schaefer 100" ⭐ (6/29, 6/30)
 
-To make results **biologically meaningful**, I upgraded to the **Schaefer 100 atlas** these two days, which is a functionally-defined atlas based on real brain networks (e.g., Default Mode Network).
+To make results **biologically meaningful**, I upgraded to the **Schaefer 100 atlas**, which is a functionally-defined atlas based on real brain networks (e.g., Default Mode Network).
 
 > **Why Schaefer 100, not 400?** Finer parcellation (400) demands much heavier noise regression. Schaefer 100 is the best balance between **capturing network dynamics** and **controlling noise** at the pilot stage.
 
