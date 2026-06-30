@@ -90,7 +90,7 @@ A grid atlas only cuts the brain by geometry. To make results **biologically mea
 
 <div align="center">
   <p><b>Schaefer 100 — ROI Time-Series Heatmap</b></p>
-  <img src="figures/pilot_schaefer100_roi_timeseries_heatmap.png" alt="Schaefer ROI heatmap" width="55%">
+  <img src="sch100_roi_timeseries_heatmap.png" alt="Schaefer static FC" width="50%">
 </div>
 
 **Note the vertical bands:** many ROIs fluctuate at the *same* time points. In fMRI this typically reflects **global signal, head motion, or physiological noise**. I treat this heatmap as a **quality-control signal**, not as neural evidence — it tells me denoising must be strengthened next.
@@ -99,28 +99,28 @@ A grid atlas only cuts the brain by geometry. To make results **biologically mea
 
 <div align="center">
   <p><b>Schaefer 100 — Static FC Matrix</b></p>
-  <img src="figures/pilot_schaefer100_static_fc_matrix.png" alt="Schaefer static FC" width="70%">
+  <img src="sch100_static_fc_fisher_z_matrix.png" alt="Schaefer static FC" width="70%">
 </div>
 
 Compared with the grid atlas, the Schaefer 100 matrix shows a **more structured, network-organized layout** and a **narrower FC distribution** (SD 0.334 → 0.257). Because ROIs are now functionally coherent, connectivity estimates are more stable and interpretable.
 
 <div align="center">
   <p><b>Schaefer 100 — Static FC Descriptive Checks</b></p>
-  <img src="figures/pilot_schaefer100_static_fc_descriptive_checks.png" alt="Schaefer FC checks" width="68%">
+  <img src="sch100_static_fc_descriptive_checks.png" alt="Schaefer FC checks" width="68%">
 </div>
 
 ### 4.3 Dynamic FC
 
 <div align="center">
   <p><b>Schaefer 100 — dFC Mean Connectivity Trajectory</b></p>
-  <img src="figures/pilot_schaefer100_dfc_mean_connectivity_trajectory.png" alt="Schaefer dFC trajectory" width="68%">
+  <img src="sch100_dfc_mean_connectivity_trajectory.png" alt="Schaefer dFC trajectory" width="68%">
 </div>
 
 Mean connectivity is **not flat** across windows — confirming there is temporal structure for dFC to capture.
 
 <div align="center">
   <p><b>Schaefer 100 — dFC Variability Matrix</b></p>
-  <img src="figures/pilot_schaefer100_dfc_variability_matrix.png" alt="Schaefer dFC variability" width="48%">
+  <img src="sch100_dfc_variability_matrix.png" alt="Schaefer dFC variability" width="48%">
 </div>
 
 Brighter edges fluctuate more over time. With Schaefer 100, these variable edges can later be **mapped onto large-scale networks** — something the grid atlas could not support.
