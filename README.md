@@ -10,7 +10,7 @@ This repository develops a computationally reproducible workflow for static func
 
 The long-term goal is to compare static FC and dFC features to evaluate whether dynamic connectivity measures provide complementary information beyond traditional static connectivity analyses.
 
-**Final course presentation slides are available in `doc/final_presentation.pdf`.**
+**Final course presentation slides are available in `doc/BHS final_project.pdf`.**
 
 ## Scope
 
