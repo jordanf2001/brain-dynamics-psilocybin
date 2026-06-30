@@ -75,7 +75,7 @@ sub-PC001 / ses-01 / task-rest / run-1
 
 ---
 
-## 4. Pipeline 2 — System Upgrade with Schaefer 100 ⭐
+## 4. Upgrade: Pipeline 2 with "Schaefer 100" ⭐
 
 To make results **biologically meaningful**, I upgraded to the **Schaefer 100 atlas** these two days, which is a functionally-defined atlas based on real brain networks (e.g., Default Mode Network).
 
@@ -90,7 +90,7 @@ To make results **biologically meaningful**, I upgraded to the **Schaefer 100 at
 | Mean dFC variability | 0.361 | 0.355 |
 | Max dFC variability | 0.653 | 0.689 |
 
-### 4.1 ROI Time Series
+## 4.1 ROI Time Series
 
 <div align="center">
   <p><b>Schaefer 100 — ROI Time-Series Heatmap</b></p>
@@ -100,7 +100,7 @@ To make results **biologically meaningful**, I upgraded to the **Schaefer 100 at
 **Vertical bands = many ROIs fluctuating together.** This typically reflects **global signal, head motion, or physiological noise** — not neural evidence. It's a **QC signal** telling me denoising needs strengthening.
 
 
-### 4.2 Static FC — Grid vs Schaefer 100
+## 4.2 Static FC — Grid vs Schaefer 100
 
 <div align="center">
   <p><b>grid atlas - Static FC Matrix</b></p>
@@ -112,29 +112,24 @@ To make results **biologically meaningful**, I upgraded to the **Schaefer 100 at
   <img src="sch100_static_fc_fisher_z_matrix.png" alt="Schaefer static FC" width="70%">
 </div>
 
-**Key difference:** Schaefer 100 shows more **structured, network-organized** layout. FC distribution is narrower (SD 0.334 → 0.257) because ROIs are now functionally coherent — connectivity estimates are more stable.
+### **Key difference:** Schaefer 100 shows more **structured, network-organized** layout. 
 
-<div align="center">
-  <p><b>Schaefer 100 — Static FC Descriptive Checks</b></p>
-  <img src="sch100_static_fc_descriptive_checks.png" alt="Schaefer FC checks" width="65%">
-</div>
-
-
-### 4.3 Dynamic FC
+## 4.3 Dynamic FC
 
 <div align="center">
   <p><b>Schaefer 100 — dFC Mean Connectivity Trajectory</b></p>
   <img src="sch100_dfc_mean_connectivity_trajectory.png" alt="Schaefer dFC trajectory" width="68%">
 </div>
 
-Mean connectivity is **not flat** across windows — confirming there is temporal structure for dFC to capture.
+### Mean connectivity is **not flat** — temporal structure exists for dFC to capture.
 
 <div align="center">
   <p><b>Schaefer 100 — dFC Variability Matrix</b></p>
   <img src="sch100_dfc_variability_matrix.png" alt="Schaefer dFC variability" width="48%">
 </div>
 
-Brighter edges fluctuate more over time. With Schaefer 100, these variable edges can later be **mapped onto large-scale networks** — something the grid atlas could not support.
+### Brighter edges = higher temporal fluctuation. 
+With Schaefer 100, these can be **mapped onto large-scale networks** — impossible with grid atlas.
 
 ---
 
@@ -154,32 +149,10 @@ This open, plug-and-play toolkit is ready to scale to the remaining 127 PsiConne
 
 ---
 
-## 6. Limitations & Next Steps
+## 6. Next Steps
 
-**Limitations**
-- Only one pilot run processed; no group-level inference yet.
-- Vertical bands suggest residual global signal / motion; denoising not finalized.
-- The meaning of `ses-01` vs `ses-02` still needs confirmation from dataset documentation.
+- Add motion QC and global-signal checks.
+- Scale to all 127 runs.
+- Map Schaefer 100 onto 7 large-scale networks.
+- Compare FC/dFC across sessions/conditions.
 
-**Next Steps**
-- Add motion QC (framewise displacement) and global-signal checks.
-- Scale to all 127 matched runs.
-- Map Schaefer 100 ROIs onto 7 large-scale networks for within/between-network dFC.
-- Link runs to session/condition metadata, then compare FC/dFC features.
-
----
-
-## 7. Usage
-
-```bash
-python src/check_dataset.py --data-dir /path/to/ds006110
-python src/build_file_index.py --data-dir /path/to/ds006110
-```
-
-Figures are reproduced via `pilot_schaefer100_generation.ipynb` (upload the Schaefer 100-derived CSVs and `fc_dfc_schaefer100.zip` when prompted).
-
----
-
-## License
-
-Released under the MIT License. The license applies only to the code and documentation in this repository; the original PsiConnect dataset follows its own OpenNeuro terms.
