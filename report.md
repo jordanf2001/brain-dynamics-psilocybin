@@ -55,7 +55,7 @@ I built a **workflow** that goes from
 
 ---
 
-## 3. Pipeline 1 — Validation with a Preliminary Grid Atlas
+## 3. Pipeline 1 — Validation with a Preliminary Grid Atlas (6/15)
 
 I first validated the pipeline using a **preliminary grid atlas (67 ROIs)** on one pilot run:
 
@@ -91,7 +91,7 @@ sub-PC001 / ses-01 / task-rest / run-1
 
 ---
 
-## 4. Upgrade: Pipeline 2 with "Schaefer 100" ⭐
+## 4. Upgrade: Pipeline 2 with "Schaefer 100" ⭐ (6/29, 6/30)
 
 To make results **biologically meaningful**, I upgraded to the **Schaefer 100 atlas** these two days, which is a functionally-defined atlas based on real brain networks (e.g., Default Mode Network).
 
