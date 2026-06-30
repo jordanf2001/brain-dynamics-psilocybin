@@ -13,7 +13,7 @@ Traditional **static functional connectivity (sFC)** averages the entire scan in
 
 <div align="center">
   <p><b>Why Dynamics Matter: Window-to-Window FC Similarity</b></p>
-  <img src="figures/pilot_schaefer100_window_to_window_fc_similarity.png" alt="Window-to-window FC similarity" width="48%">
+  <img src="sch100_window_to_window_fc_similarity.png" alt="Window-to-window FC similarity" width="48%">
 </div>
 
 If we only ran static analysis, this temporal structure would be **completely averaged away**. This is the core motivation for building a **dynamic functional connectivity (dFC)** pipeline.
