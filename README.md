@@ -77,7 +77,7 @@ sub-PC001 / ses-01 / task-rest / run-1
   <p><b>Example result: Grid Atlas — Static FC & dFC Variability Matrix</b></p>
    <img src="figures/pilot_static_fc_fisher_z_matrix.png" alt="Static FC matrix" width="70%">
    <img src="figures/pilot_dfc_variability_matrix.png" alt="dFC variability matrix" width="50%">
-   <p><b>(see README.md)</b></p>
+   <p><b>(see old_README.md)</b></p>
 
 </div>
 
