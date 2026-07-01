@@ -162,7 +162,7 @@ To make results **biologically meaningful**, I upgraded to the **Schaefer 100 at
 ### Mean connectivity is **not flat** — temporal structure exists for dFC to capture.
 
 <div align="center">
-  <p><b>Grid Atlas — dFC Mean Connectivity Trajectory</b></p>
+  <p><b>Grid Atlas — dFC Variability Matrix</b></p>
   <img src="figures/pilot_dfc_variability_matrix.png" alt="dFC variability matrix" width="38%">
 </div>
 
