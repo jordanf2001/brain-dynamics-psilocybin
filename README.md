@@ -195,8 +195,37 @@ leading to more structured and biologically meaningful patterns.
   <img src="sch100_dfc_variability_matrix.png" alt="Schaefer dFC variability" width="58%">
 </div>
 
-### Brighter edges = higher temporal fluctuation. 
-With Schaefer 100, these can be **mapped onto large-scale networks** — impossible with grid atlas.
+### What this figure shows
+The variability (standard deviation) of each functional connection across time windows.
+
+Brighter values indicate connections that fluctuate more over time.
+
+### Key observation
+- Grid atlas shows more scattered and less interpretable variability patterns  
+- Schaefer 100 shows **structured variability aligned with network organization**  
+
+### Interpretation
+The difference arises from both **parcellation strategy** and **signal structure**:
+
+1. **Functional alignment**
+   - In Schaefer 100, ROIs belong to coherent functional networks  
+   - This allows meaningful fluctuations (e.g., within DMN or between networks) to emerge  
+
+2. **Signal mixing in grid atlas**
+   - Grid ROIs may mix signals from multiple functional regions  
+   - This blurs dynamic changes and produces noisy variability patterns  
+
+3. **Noise vs neural signal**
+   - Some variability reflects true neural dynamics  
+   - But some may be driven by:
+     - head motion  
+     - global signal  
+     - physiological noise  
+
+Therefore, structured variability in Schaefer 100 is more likely to reflect
+**neurobiologically meaningful dynamics**, while grid atlas variability is harder to interpret.
+
+
 
 ---
 
