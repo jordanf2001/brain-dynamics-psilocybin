@@ -135,7 +135,22 @@ To make results **biologically meaningful**, I upgraded to the **Schaefer 100 at
   <img src="sch100_roi_timeseries_heatmap.png" alt="Schaefer ROI heatmap" width="50%">
 </div>
 
-**Vertical bands = many ROIs fluctuating together.** This typically reflects **global signal, head motion, or physiological noise** — not neural evidence. It's a **QC signal** telling me denoising needs strengthening.
+### What this figure shows
+Time series of all ROIs across the scan.
+
+### Key observation
+Vertical bands indicate many ROIs fluctuating simultaneously.
+
+### Interpretation
+These global co-fluctuations are unlikely to reflect specific functional interactions.
+
+They are more likely caused by:
+- global signal fluctuations  
+- head motion artifacts  
+- physiological noise (e.g., respiration, cardiac signals)  
+
+This serves as a **quality control (QC) indicator**,
+suggesting that stronger denoising procedures may be needed.
 
 
 ## 4.2 Static FC — Grid vs Schaefer 100
