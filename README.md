@@ -21,9 +21,11 @@ This makes it suitable for studying:
 
 In task-free conditions, brain connectivity is usually not static.
 
-Traditional **static functional connectivity (sFC)** averages the entire scan into a **single matrix**, which **removes all temporal information**.
+**static functional connectivity (sFC)** averages the entire scan into a **single matrix**, which **removes all temporal information**.
 
-Instead, **dynamic functional connectivity (dFC)** captures how connectivity patterns **change over time**.
+Instead, 
+
+**dynamic functional connectivity (dFC)** captures how connectivity patterns **change over time**.
 
 ### Sliding-window methods
 
