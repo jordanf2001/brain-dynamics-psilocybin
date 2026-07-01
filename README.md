@@ -165,7 +165,9 @@ suggesting that stronger denoising procedures may be needed.
   <img src="sch100_static_fc_fisher_z_matrix.png" alt="Schaefer static FC" width="70%">
 </div>
 
-### **Key difference:** Schaefer 100 shows more **structured, network-organized** layout. 
+### **Key difference:** 
+
+Schaefer 100 shows more **structured, network-organized** layout. 
 
 ### Interpretation
 The difference comes from how the brain is parcellated:
