@@ -113,7 +113,7 @@ sub-PC001 / ses-01 / task-rest / run-1
 
 ---
 
-## 4. Upgrade: Pipeline 2 with "Schaefer 100" ⭐ (6/29, 6/30)
+## 4. Upgrade: Pipeline 2 with "Schaefer 100" ⭐ (6/29, 6/30 in singapore)
 
 To make results **biologically meaningful**, I upgraded to the **Schaefer 100 atlas**, which is a functionally-defined atlas based on real brain networks (e.g., Default Mode Network).
 
@@ -151,6 +151,15 @@ To make results **biologically meaningful**, I upgraded to the **Schaefer 100 at
 </div>
 
 ### **Key difference:** Schaefer 100 shows more **structured, network-organized** layout. 
+
+### Interpretation
+The difference comes from how the brain is parcellated:
+
+- Grid atlas divides the brain geometrically, without respecting functional boundaries  
+- Schaefer 100 is based on intrinsic functional networks  
+
+As a result, Schaefer captures coherent within-network connectivity,
+leading to more structured and biologically meaningful patterns.
 
 ## 4.3 Dynamic FC
 
