@@ -10,7 +10,7 @@
 ### Conscious states fluctuate over time. This is evident across multiple research domains:
 
 - **Resting-state** 
-- **Psychedelic** 
+- **Psychedelic (drug-induced altered-state)** 
 - **Sensory deprivation** 
 
 Prolonged, task-free scans capture **intrinsic brain dynamics** without external interference.
