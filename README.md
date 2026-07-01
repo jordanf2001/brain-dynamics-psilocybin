@@ -32,8 +32,6 @@ The figure below shows the reality: connectivity patterns are **not constant**. 
   <img src="sch100_window_to_window_fc_similarity.png" alt="Window-to-window FC similarity" width="50%">
 </div>
 
-(sliding window method, 附示意圖)
-
 Static analysis would **average all this away**.
 
 ### The Solution
