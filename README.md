@@ -21,7 +21,7 @@ This makes it suitable for studying:
 
 In task-free conditions, brain connectivity is usually not static.
 
-Traditional **static functional connectivity (sFC)** averages the entire scan into a single matrix, which removes all temporal information.
+Traditional **static functional connectivity (sFC)** averages the entire scan into a **single matrix**, which **removes all temporal information**.
 
 Instead, **dynamic functional connectivity (dFC)** captures how connectivity patterns **change over time**.
 
@@ -47,29 +47,6 @@ It shows that connectivity patterns are **not constant**.
 </div>
 
 Static analysis would average all this temporal structure away.
-
-### The Problem with Static FC
-
-Traditional **static functional connectivity (sFC)** averages the entire scan into a single matrix — **erasing temporal dynamics completely**.
-
-<div align="center">
-  <p><b>dFC method: Sliding Windows</b></p>
-  <img src="Sliding-Windows.png" alt="Sliding_Windows_concepts" width="65%">
-</div>
-
-
-The figure below shows the reality: connectivity patterns are **not constant**. Different time windows form distinct similarity blocks.
-
-<div align="center">
-  <p><b>Why Dynamics Matter: Window-to-Window FC Similarity</b></p>
-  <img src="sch100_window_to_window_fc_similarity.png" alt="Window-to-window FC similarity" width="50%">
-</div>
-
-Static analysis would **average all this away**.
-
-### The Solution
-
-This is the core motivation for building a **dynamic functional connectivity (dFC)** pipeline for **task-free** neuroimaging data.
 
 
 ---
