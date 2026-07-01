@@ -1,4 +1,4 @@
-# Computationally Reproducible dynamic Functional connectivity Workflow for task-free Resting-State fMRI
+# Reproducible dynamic Functional connectivity (dFC) Workflow for task-free Resting-State fMRI
 
 #### Author: Yu-kan Fan (范育康)
 #### Institution: National Taiwan University
