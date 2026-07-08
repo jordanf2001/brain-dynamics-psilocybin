@@ -105,11 +105,11 @@ def main():
 
         base = f"{subject}_{session}_{task}_{run}"
 
-        # 檔名更新為 schaefer100 以做區隔
+        # 在檔案名稱中加入 schaefer100 標示
         atlas_out = output_dir / f"{base}_schaefer100_atlas.nii.gz"
-        ts_out = output_dir / f"{base}_roi_timeseries.csv"
-        ts_z_out = output_dir / f"{base}_roi_timeseries_z.csv"
-        labels_out = output_dir / f"{base}_roi_labels.csv"
+        ts_out = output_dir / f"{base}_schaefer100_roi_timeseries.csv"
+        ts_z_out = output_dir / f"{base}_schaefer100_roi_timeseries_z.csv"
+        labels_out = output_dir / f"{base}_schaefer100_roi_labels.csv"
 
         nib.save(atlas_img, str(atlas_out))
 
