@@ -66,7 +66,7 @@ def standardize_timeseries(ts):
 def main():
     parser = argparse.ArgumentParser(description="Extract ROI time series from ready resting-state BOLD data.")
     parser.add_argument("--ready-index", type=str, default="outputs/qc/rest_ready_for_roi.csv")
-    parser.add_argument("--output-dir", type=str, default="outputs/roi_timeseries")
+    parser.add_argument("--output-dir", type=str, default="outputs/roi_timeseries_schaefer100")
     parser.add_argument("--atlas-mode", type=str, default="schaefer", choices=["schaefer"])
     args = parser.parse_args()
 
