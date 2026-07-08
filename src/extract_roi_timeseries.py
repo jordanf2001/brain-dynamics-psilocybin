@@ -138,10 +138,11 @@ def main():
 
         base = f"{subject}_{session}_{task}_{run}"
 
-        atlas_out = output_dir / f"{base}_grid_atlas.nii.gz"
-        ts_out = output_dir / f"{base}_roi_timeseries.csv"
-        ts_z_out = output_dir / f"{base}_roi_timeseries_z.csv"
-        labels_out = output_dir / f"{base}_roi_labels.csv"
+        # 在檔案名稱中加入 preliminary_grid 標示
+        atlas_out = output_dir / f"{base}_preliminary_grid_atlas.nii.gz"
+        ts_out = output_dir / f"{base}_preliminary_grid_roi_timeseries.csv"
+        ts_z_out = output_dir / f"{base}_preliminary_grid_roi_timeseries_z.csv"
+        labels_out = output_dir / f"{base}_preliminary_grid_roi_labels.csv"
 
         nib.save(atlas_img, str(atlas_out))
 
