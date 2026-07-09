@@ -132,7 +132,7 @@ To make results **biologically meaningful**, I upgraded to the **Schaefer 100 at
 
 <div align="center">
   <p><b>Schaefer 100 — ROI Time-Series Heatmap</b></p>
-  <img src="sch100_roi_timeseries_heatmap.png" alt="Schaefer ROI heatmap" width="50%">
+  <img src="figures/sch100_roi_timeseries_heatmap.png" alt="Schaefer ROI heatmap" width="50%">
 </div>
 
 ### What this figure shows
@@ -162,7 +162,7 @@ suggesting that stronger denoising procedures may be needed.
 
 <div align="center">
   <p><b>Schaefer 100 — Static FC Matrix</b></p>
-  <img src="sch100_static_fc_fisher_z_matrix.png" alt="Schaefer static FC" width="70%">
+  <img src="figures/sch100_static_fc_fisher_z_matrix.png" alt="Schaefer static FC" width="70%">
 </div>
 
 ### **Key difference:** 
@@ -182,7 +182,7 @@ leading to more structured and biologically meaningful patterns.
 
 <div align="center">
   <p><b>Schaefer 100 — dFC Mean Connectivity Trajectory</b></p>
-  <img src="sch100_dfc_mean_connectivity_trajectory.png" alt="Schaefer dFC trajectory" width="68%">
+  <img src="figures/sch100_dfc_mean_connectivity_trajectory.png" alt="Schaefer dFC trajectory" width="68%">
 </div>
 
 ### Mean connectivity is **not flat** — temporal structure exists for dFC to capture.
@@ -194,7 +194,7 @@ leading to more structured and biologically meaningful patterns.
 
 <div align="center">
   <p><b>Schaefer 100 — dFC Variability Matrix</b></p>
-  <img src="sch100_dfc_variability_matrix.png" alt="Schaefer dFC variability" width="58%">
+  <img src="figures/sch100_dfc_variability_matrix.png" alt="Schaefer dFC variability" width="58%">
 </div>
 
 ### What this figure shows
