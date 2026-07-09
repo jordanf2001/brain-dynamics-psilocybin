@@ -174,7 +174,7 @@ A machine-readable summary of the pilot run is available at `outputs/pilot_summa
 
 <div align="center">
   <p><b>Static FC Descriptive Checks</b></p>
-  <img src="figures/pilot_static_fc_descriptive_checks.png" alt="Static FC descriptive checks" width="70%">
+  <img src="figures/preliminary_grid_static_fc_stats.png" alt="Static FC descriptive checks" width="70%">
 </div>
 
 **Figure:** Static FC sanity checks, including the distribution of pairwise FC values and mean connectivity strength by ROI. These plots are not interpreted as ROI-level neurobiological findings.
@@ -192,14 +192,14 @@ Dynamic FC was estimated using a sliding-window approach. The pilot run was divi
 
 <div align="center">
   <p><b>dFC Variability Matrix</b></p>
-  <img src="figures/pilot_dfc_variability_matrix.png" alt="dFC variability matrix" width="50%">
+  <img src="figures/preliminary_grid_dfc_variability_matrix.png" alt="dFC variability matrix" width="50%">
 </div>
 
 **Figure:** Edge-wise dFC variability matrix. Brighter values indicate ROI-to-ROI connections with greater temporal fluctuation across windows.
 
 <div align="center">
   <p><b>Window-to-window FC Similarity</b></p>
-  <img src="figures/pilot_window_to_window_fc_similarity.png" alt="Window-to-window FC similarity" width="50%">
+  <img src="figures/preliminary_grid_window_to_window_fc_similarity.png" alt="Window-to-window FC similarity" width="50%">
 </div>
 
 **Figure:** Window-to-window FC pattern similarity matrix. Higher values indicate more similar whole-matrix FC configurations between windows.
