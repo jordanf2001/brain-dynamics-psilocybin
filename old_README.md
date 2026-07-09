@@ -156,7 +156,7 @@ A machine-readable summary of the pilot run is available at `outputs/pilot_summa
 
 <div align="center">
   <p><b>ROI Time-series Heatmap</b></p>
-  <img src="figures/roi_timeseries_preliminary_grid_combined.png" alt="ROI time-series heatmap" width="50%">
+  <img src="figures/preliminary_grid_roi_timeseries_combined.png" alt="ROI time-series heatmap" width="50%">
 </div>
 
 **Figure:** ROI time-series heatmaps from the pilot run. The upper panel shows raw ROI signals, and the lower panel shows z-scored ROI signals. Rows correspond to ROIs and columns correspond to time points.
@@ -165,10 +165,10 @@ A machine-readable summary of the pilot run is available at `outputs/pilot_summa
 
 <div align="center">
   <p><b>Static FC Matrix</b></p>
-  <img src="figures/pilot_static_fc_fisher_z_matrix.png" alt="Static FC matrix" width="70%">
+  <img src="figures/preliminary_grid_static_fc.png" alt="Static FC matrix" width="50%">
 </div>
 
-**Figure:** Static FC matrices from the pilot run. The left panel shows raw Pearson correlation values, and the right panel shows Fisher z-transformed FC values. The diagonal is masked for visualization.
+**Figure:** Static FC matrices from the pilot run. The panel shows Fisher z-transformed FC values. The diagonal is masked for visualization.
 
 ### Static FC Descriptive Checks
 
