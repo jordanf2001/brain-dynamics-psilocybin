@@ -185,7 +185,7 @@ Dynamic FC was estimated using a sliding-window approach. The pilot run was divi
 
 <div align="center">
   <p><b>dFC Mean Connectivity Trajectory</b></p>
-  <img src="figures/pilot_dfc_mean_connectivity_trajectory.png" alt="dFC mean connectivity trajectory" width="70%">
+  <img src="figures/preliminary_grid_dfc_mean_connectivity_timecourse.png" alt="dFC mean connectivity trajectory" width="70%">
 </div>
 
 **Figure:** Mean Fisher z-transformed FC across sliding windows. The shaded region indicates ±1 SD across edges within each window.
