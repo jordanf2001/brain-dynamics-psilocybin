@@ -34,7 +34,7 @@ we can compute connectivity within each window
 and track how it evolves.
 
 <div align="center">
-  <img src="Sliding-Windows.png" width="65%">
+  <img src="figures/schematics/Sliding-Windows.png" width="65%">
 </div>
 
 ### Empirical example of my dataset
@@ -45,7 +45,7 @@ It shows that connectivity patterns are **not constant**.
 
 <div align="center">
   <p><b>Window-to-Window FC Similarity</b></p>
-  <img src="sch100_window_to_window_fc_similarity.png" width="50%">
+  <img src="figures/sch100_window_to_window_fc_similarity.png" width="50%">
 </div>
 
 Static analysis would average all this temporal structure away.
@@ -71,7 +71,7 @@ Workflow validation on one pilot run 'sub001',
 
 
 <div align="center">
-  <img src="analysispipeline.png" alt="analysis pipeline" width="30%">
+  <img src="figures/schematics/analysispipeline.png" alt="analysis pipeline" width="30%">
 </div>
 
 
@@ -97,8 +97,8 @@ sub-PC001 / ses-01 / task-rest / run-1
 
 <div align="center">
   <p><b>Example result: Grid Atlas — Static FC & dFC Variability Matrix</b></p>
-   <img src="figures/pilot_static_fc_fisher_z_matrix.png" alt="Static FC matrix" width="70%">
-   <img src="figures/pilot_dfc_variability_matrix.png" alt="dFC variability matrix" width="50%">
+   <img src="figures/preliminary_grid_static_fc.png" alt="Static FC matrix" width="70%">
+   <img src="figures/preliminary_grid_dfc_variability_matrix.png" alt="dFC variability matrix" width="50%">
    <p><b>(see old_README.md)</b></p>
 
 </div>
