@@ -32,8 +32,8 @@ def vectorize_upper_triangle(mat):
 
 def main():
     parser = argparse.ArgumentParser(description="Compute static FC and sliding-window DFC from ROI time series.")
-    parser.add_argument("--timeseries-summary", type=str, default="outputs/roi_timeseries/roi_timeseries_summary.csv")
-    parser.add_argument("--output-dir", type=str, default="outputs/fc_dfc")
+    parser.add_argument("--timeseries-summary", type=str, default="outputs/roi_timeseries/roi_timeseries_summary_preliminary_grid.csv")
+    parser.add_argument("--output-dir", type=str, default="outputs/fc_dfc_preliminary_grid")
     parser.add_argument("--window-size", type=int, default=60)
     parser.add_argument("--step-size", type=int, default=10)
     args = parser.parse_args()
@@ -55,7 +55,7 @@ def main():
         run = row["run"]
         ts_path = Path(row["timeseries_z_path"])
 
-        base = f"{subject}_{session}_{task}_{run}"
+        base = f"{subject}_{session}_{task}_{run}_preliminary_grid"
 
         print("=" * 70)
         print(f"Processing FC/DFC: {base}")
