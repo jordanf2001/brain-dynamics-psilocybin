@@ -63,7 +63,7 @@ I built a **workflow** that goes from
 
 PsiConnect (OpenNeuro `ds006110`) — a **psychedelic** neuroimaging study. This dataset is ideal for dFC analysis because altered consciousness states exhibit rich temporal dynamics.
 <div align="center">
-  <img src="figures/schematics/representation of study design.png" alt="study design" width="30%">
+  <img src="figures/schematics/representation of study design.jpeg" alt="study design" width="110%">
 </div>
 
 ### Current focus:
