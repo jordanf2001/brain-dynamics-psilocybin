@@ -5,6 +5,17 @@
 
 ---
 
+### Repository Structure
+
+```text
+src/                  core pipeline scripts
+outputs/              derived CSV and connectivity outputs
+notebooks/            pilot figure-generation notebooks
+figures/              generated pilot figures
+docs/                 supplementary documentation
+```
+
+
 ## 1. What This Project Does
 
 This project builds a **reproducible pipeline for dynamic functional connectivity (dFC)** analysis in fMRI data.
@@ -68,8 +79,7 @@ PsiConnect (OpenNeuro `ds006110`) — a **psychedelic** neuroimaging study. This
 
 ### Current focus:
 
-Current workflow validation is based on one pilot resting-state run from sub-PC001 (control participant; no 8-week meditation training), ses-01, task-rest, run-1 (resting state). 
-
+The current workflow has been validated on one pilot resting-state run from `sub-PC001`, a control participant without 8-week meditation training (`ses-01`, `task-rest`, `run-1`).
 
 ```mermaid
 flowchart TD
@@ -101,7 +111,7 @@ flowchart TD
 
 ---
 
-## 4. Pipeline 1 — Validation with a Preliminary Grid Atlas (6/15)
+## 4. Pipeline 1 — Validation with a Preliminary Grid Atlas 
 
 I first validated the pipeline using a **preliminary grid atlas (67 ROIs)** on one pilot run:
 
@@ -109,7 +119,7 @@ I first validated the pipeline using a **preliminary grid atlas (67 ROIs)** on o
 sub-PC001 / ses-01 / task-rest / run-1
 ```
 
-Earlier preliminary-grid pilot documentation is preserved in "**old_readme_preliminary_grid.md**" for historical reference.
+Earlier preliminary-grid pilot documentation is preserved in `old_readme_preliminary_grid.md` for historical reference.
 > This atlas is purely geometric. Its goal is **code validation**, not neurobiological interpretation.
 
 | Output | Result |
@@ -138,7 +148,7 @@ Earlier preliminary-grid pilot documentation is preserved in "**old_readme_preli
 
 ---
 
-## 5. Upgrade: Pipeline 2 with "Schaefer 100" ⭐ (6/29, 6/30 in singapore)
+## 5. Upgrade: Pipeline 2 with "Schaefer 100" ⭐ 
 
 To make results **biologically meaningful**, I upgraded to the **Schaefer 100 atlas**, which is a functionally-defined atlas based on real brain networks (e.g., Default Mode Network).
 
