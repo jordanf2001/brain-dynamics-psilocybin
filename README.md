@@ -188,10 +188,10 @@ This serves as a **quality control (QC) indicator**,
 suggesting that **stronger denoising procedures may be needed.**
 
 
-## 5.2 Static FC — Grid vs Schaefer 100
+## 5.2 Static FC — Preliminary Grid vs Schaefer 100
 
 <div align="center">
-  <p><b>grid atlas - Static FC Matrix</b></p>
+  <p><b>Preliminary Grid - Static FC Matrix</b></p>
   <img src="figures/pilot_static_fc_fisher_z_matrix.png" alt="Static FC matrix" width="50%">
 </div>
 
@@ -207,7 +207,7 @@ Schaefer 100 shows more **structured, network-organized** layout.
 ### Interpretation
 The difference comes from how the brain is parcellated:
 
-- Grid atlas divides the brain geometrically, without respecting functional boundaries  
+- Preliminary Grid divides the brain geometrically, without respecting functional boundaries  
 - Schaefer 100 is based on intrinsic functional networks  
 
 As a result, Schaefer captures coherent within-network connectivity,
