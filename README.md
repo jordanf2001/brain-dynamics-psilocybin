@@ -167,7 +167,7 @@ To make results **biologically meaningful**, I upgraded to the **Schaefer 100 at
 
 <div align="center">
   <p><b>Schaefer 100 — ROI Time-Series Heatmap</b></p>
-  <img src="figures/sch100_roi_timeseries_heatmap.png" alt="Schaefer ROI heatmap" width="50%">
+  <img src="figures/schaefer100_roi_timeseries_heatmap_combined.png" alt="Schaefer ROI heatmap" width="70%">
 </div>
 
 ### What this figure shows
