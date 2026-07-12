@@ -154,7 +154,7 @@ To make results **biologically meaningful**, I upgraded to the **Schaefer 100 at
 
 > **Why Schaefer 100, not 400?** Finer parcellation (400) demands much heavier noise regression. Schaefer 100 is the best balance between **capturing network dynamics** and **controlling noise** at the pilot stage.
 
-| Metric | Grid atlas | Schaefer 100 |
+| Metric | Preliminary Grid | Schaefer 100 |
 |---|---:|---:|
 | ROIs | 67 | 100 |
 | Unique edges | 2211 | 4950 |
