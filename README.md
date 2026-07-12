@@ -68,7 +68,7 @@ PsiConnect (OpenNeuro `ds006110`) — a **psychedelic** neuroimaging study. This
 
 ### Current focus:
 
-Workflow validation on one pilot run 'sub001', 
+Workflow validation on one pilot run (sub001), control group (no 8-week meditation training), fMRI session ses-01 (resting state). 
 
 
 ```mermaid
@@ -88,6 +88,16 @@ flowchart TD
     style E fill:#f0f0f0
     style F fill:#f0f0f0
 ```
+
+### Overview (Scripts ↔ Stages)
+
+| Script | Stage | Purpose |
+|---|---|---|
+| `check_dataset.py` | 0. Dataset Check | Quick inspection of fMRIPrep derivatives availability |
+| `build_file_index.py` | 1. File Index | Generate structured file index for all resting-state runs |
+| `qc_bold_metadata.py` | 2. Quality Control | Deep QC of BOLD metadata, readability, and temporal alignment |
+| `extract_roi_schaefer100.py` | 3. ROI Extraction | Extract ROI time series using Schaefer 100 atlas |
+| `compute_fc_dfc.py` | 4. FC/DFC Computation | Compute static FC and sliding-window dFC matrices |
 
 ---
 
