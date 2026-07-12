@@ -1,4 +1,4 @@
-# Reproducible dynamic Functional connectivity (dFC) Workflow for task-free Resting-State fMRI
+# Reproducible Static and Dynamic Functional Connectivity Workflow for Task-Free Resting-State fMRI
 
 ### Author: Yu-kan Fan (范育康)
 #### Institution: National Taiwan University
@@ -68,7 +68,7 @@ PsiConnect (OpenNeuro `ds006110`) — a **psychedelic** neuroimaging study. This
 
 ### Current focus:
 
-Workflow validation on one pilot run (sub001), control group (no 8-week meditation training), fMRI session-01, resting state. 
+Current workflow validation is based on one pilot resting-state run from sub-PC001 (control participant; no 8-week meditation training), ses-01, task-rest, run-1 (resting state). 
 
 
 ```mermaid
