@@ -185,7 +185,7 @@ They are more likely caused by:
 - physiological noise (e.g., respiration, cardiac signals)  
 
 This serves as a **quality control (QC) indicator**,
-suggesting that stronger denoising procedures may be needed.
+suggesting that **stronger denoising procedures may be needed.**
 
 
 ## 5.2 Static FC — Grid vs Schaefer 100
