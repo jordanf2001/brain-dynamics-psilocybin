@@ -53,7 +53,7 @@ Static analysis would average all this temporal structure away.
 
 ---
 
-## 2. The Solution: A Reproducible Pipeline
+## 3. The Solution: A Reproducible Pipeline
 
 I built a **workflow** that goes from 
 
@@ -101,7 +101,7 @@ flowchart TD
 
 ---
 
-## 3. Pipeline 1 — Validation with a Preliminary Grid Atlas (6/15)
+## 4. Pipeline 1 — Validation with a Preliminary Grid Atlas (6/15)
 
 I first validated the pipeline using a **preliminary grid atlas (67 ROIs)** on one pilot run:
 
@@ -109,6 +109,7 @@ I first validated the pipeline using a **preliminary grid atlas (67 ROIs)** on o
 sub-PC001 / ses-01 / task-rest / run-1
 ```
 
+Earlier preliminary-grid pilot documentation is preserved in "**old_readme_preliminary_grid.md**" for historical reference.
 > This atlas is purely geometric. Its goal is **code validation**, not neurobiological interpretation.
 
 | Output | Result |
@@ -120,16 +121,16 @@ sub-PC001 / ses-01 / task-rest / run-1
 | Mean edge dFC variability | 0.361 |
 
 <div align="center">
-  <p><b>Example result: Grid Atlas — Static FC & dFC Variability Matrix</b></p>
-   <img src="figures/preliminary_grid_static_fc.png" alt="Static FC matrix" width="70%">
+  <p><b>Example result: Preliminary Grid Atlas — Static FC & dFC Variability Matrix</b></p>
+   <img src="figures/preliminary_grid_static_fc.png" alt="Static FC matrix" width="50%">
    <img src="figures/preliminary_grid_dfc_variability_matrix.png" alt="dFC variability matrix" width="50%">
-   <p><b>(see old_README.md)</b></p>
+   <p><b>(see old_readme_preliminary_grid.md)</b></p>
 
 </div>
 
-**Result:** The pipeline successfully produced ROI time series, static FC, and 45 dynamic FC windows. The code works.
+### Result: These results confirm that the pipeline runs end-to-end and can successfully generate ROI time series, static FC matrices, and sliding-window dFC outputs from the pilot dataset.
 
-### but! Grid atlas only cuts the brain by geometry. </b></p> 
+### However, the preliminary grid atlas is purely geometric and therefore limited in neurobiological interpretability.
 
 <div align="center">
 <p><b>So...</b></p>
@@ -137,7 +138,7 @@ sub-PC001 / ses-01 / task-rest / run-1
 
 ---
 
-## 4. Upgrade: Pipeline 2 with "Schaefer 100" ⭐ (6/29, 6/30 in singapore)
+## 5. Upgrade: Pipeline 2 with "Schaefer 100" ⭐ (6/29, 6/30 in singapore)
 
 To make results **biologically meaningful**, I upgraded to the **Schaefer 100 atlas**, which is a functionally-defined atlas based on real brain networks (e.g., Default Mode Network).
 
@@ -152,7 +153,7 @@ To make results **biologically meaningful**, I upgraded to the **Schaefer 100 at
 | Mean dFC variability | 0.361 | 0.355 |
 | Max dFC variability | 0.653 | 0.689 |
 
-## 4.1 ROI Time Series
+## 5.1 ROI Time Series
 
 <div align="center">
   <p><b>Schaefer 100 — ROI Time-Series Heatmap</b></p>
@@ -177,7 +178,7 @@ This serves as a **quality control (QC) indicator**,
 suggesting that stronger denoising procedures may be needed.
 
 
-## 4.2 Static FC — Grid vs Schaefer 100
+## 5.2 Static FC — Grid vs Schaefer 100
 
 <div align="center">
   <p><b>grid atlas - Static FC Matrix</b></p>
@@ -202,7 +203,7 @@ The difference comes from how the brain is parcellated:
 As a result, Schaefer captures coherent within-network connectivity,
 leading to more structured and biologically meaningful patterns.
 
-## 4.3 Dynamic FC
+## 5.3 Dynamic FC
 
 <div align="center">
   <p><b>Schaefer 100 — dFC Mean Connectivity Trajectory</b></p>
@@ -255,7 +256,7 @@ Therefore, structured variability in Schaefer 100 is more likely to reflect
 
 ---
 
-## 5. Summary: One Framework, Two Depths
+## 6. Summary: One Framework, Two Depths
 
 | | Pipeline 1 (Grid) | Pipeline 2 (Schaefer 100) |
 |---|---|---|
