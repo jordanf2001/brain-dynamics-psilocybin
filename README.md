@@ -68,7 +68,7 @@ PsiConnect (OpenNeuro `ds006110`) — a **psychedelic** neuroimaging study. This
 
 ### Current focus:
 
-Workflow validation on one pilot run (sub001), control group (no 8-week meditation training), fMRI session ses-01 (resting state). 
+Workflow validation on one pilot run (sub001), control group (no 8-week meditation training), fMRI session-01, resting state. 
 
 
 ```mermaid
