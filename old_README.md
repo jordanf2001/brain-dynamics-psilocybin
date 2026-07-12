@@ -128,6 +128,86 @@ The analysis workflow consists of the following steps:
 8. Extraction of dynamic network features
 9. Comparison between static and dynamic connectivity measures
 
+## Core Pipeline Scripts
+
+This repository includes five core Python scripts that form the backbone of the FC/dFC analysis workflow. Each script corresponds to a specific stage in the pipeline, and outputs from one stage serve as inputs to the next.
+
+### Overview (Scripts ↔ Stages)
+
+| Script | Stage | Purpose |
+|---|---|---|
+| `check_dataset.py` | 0. Dataset Check | Quick inspection of fMRIPrep derivatives availability |
+| `build_file_index.py` | 1. File Index | Generate structured file index for all resting-state runs |
+| `qc_bold_metadata.py` | 2. Quality Control | Deep QC of BOLD metadata, readability, and temporal alignment |
+| `extract_roi_schaefer100.py` | 3. ROI Extraction | Extract ROI time series using **preliminary grid** / **Schaefer 100** atlas |
+| `compute_fc_dfc.py` | 4. FC/DFC Computation | Compute **static FC** and **sliding-window dFC matrices** |
+
+
+### Pipeline Input-Output Mapping
+
+```mermaid
+flowchart LR
+    subgraph S0[Stage 0]
+        direction TB
+        B[check_dataset.py]
+        B_in[Input: Dataset path]
+        B_out[Output: Terminal summary]
+        B_in --> B --> B_out
+    end
+    
+    subgraph S1[Stage 1]
+        direction TB
+        C[build_file_index.py]
+        C_in[Input: Dataset path]
+        C_out[Output: rest_file_index.csv]
+        C_in --> C --> C_out
+    end
+    
+    subgraph S2[Stage 2]
+        direction TB
+        D[qc_bold_metadata.py]
+        D_in[Input: rest_file_index.csv]
+        D_out[Output: rest_bold_qc.csv<br/>rest_ready_for_roi.csv]
+        D_in --> D --> D_out
+    end
+    
+    subgraph S3[Stage 3]
+        direction TB
+        E[extract_roi_schaefer100.py]
+        E_in[Input: rest_ready_for_roi.csv]
+        E_out[Output: ROI time series<br/>roi_timeseries_summary.csv]
+        E_in --> E --> E_out
+    end
+    
+    subgraph S4[Stage 4]
+        direction TB
+        F[compute_fc_dfc.py]
+        F_in[Input: roi_timeseries_summary.csv]
+        F_out[Output: Static FC matrices<br/>dFC window matrices<br/>fc_dfc_summary.csv]
+        F_in --> F --> F_out
+    end
+    
+    S0 --> S1
+    S1 --> S2
+    S2 --> S3
+    S3 --> S4
+    
+    style S0 fill:#e8f4f8
+    style S1 fill:#e8f4f8
+    style S2 fill:#e8f4f8
+    style S3 fill:#e8f4f8
+    style S4 fill:#e8f4f8
+```
+
+
+
+
+
+
+
+
+
+
 ---
 ## Interim Pilot Results
 
