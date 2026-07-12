@@ -70,13 +70,24 @@ PsiConnect (OpenNeuro `ds006110`) — a **psychedelic** neuroimaging study. This
 
 Workflow validation on one pilot run 'sub001', 
 
-2 different pipelines.
 
+```mermaid
+flowchart TD
+    A[fMRIPrep Derivatives] --> B[check_dataset.py]
+    B --> C[build_file_index.py]
+    C --> D[qc_bold_metadata.py]
+    D --> E[extract_roi_schaefer100.py]
+    E --> F[compute_fc_dfc.py]
+    F --> G[Static FC & Dynamic FC Outputs]
 
-<div align="center">
-  <img src="figures/schematics/analysispipeline.png" alt="analysis pipeline" width="30%">
-</div>
-
+    style A fill:#e1f5ff
+    style G fill:#fff4e1
+    style B fill:#f0f0f0
+    style C fill:#f0f0f0
+    style D fill:#f0f0f0
+    style E fill:#f0f0f0
+    style F fill:#f0f0f0
+```
 
 ---
 
