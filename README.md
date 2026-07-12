@@ -213,6 +213,13 @@ The difference comes from how the brain is parcellated:
 As a result, Schaefer captures coherent within-network connectivity,
 leading to more structured and biologically meaningful patterns.
 
+#### note: Why is the matrix mostly red?
+The dataset excludes Global Signal Regression (GSR), so the brain's natural positive background signal (red) masks true neural anti-correlations (blue).
+
+#### Why they omit GSR?
+1. Avoids Distortion: GSR artificially reduces global connectivity and distorts physiological meaning.
+2. Redundant: Physiological noise (e.g., respiration, cardiac) is already effectively removed using ME-ICA (tedana) and WM/CSF regression.
+
 ## 5.3 Dynamic FC
 
 <div align="center">
